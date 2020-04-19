@@ -1,0 +1,12 @@
+@font-face {
+    font-family: LemonMilkbold; /* Гарнитура шрифта */
+    src: url(../fonts/LemonMilkbold.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: PeaceSans; /* Гарнитура шрифта */
+    src: url(../fonts/peace_sans.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: PumpDemiBoldLetPlain; /* Гарнитура шрифта */
+    src: local(PumpDemiBoldLetPlain), url(../fonts/Pump\ Demi\ Bold\ LET\ Plain_1.0.otf); /* Путь к файлу со шрифтом */
+}
