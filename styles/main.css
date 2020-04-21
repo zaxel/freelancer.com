@@ -6,21 +6,22 @@ html{
 }
 .header{
     width: 100%;
-    padding: 30px 0;
-    border: 2px solid blueviolet;
+    height: 100vh;
+    background: url(../img/header/main_banner_mixed.jpg) center center no-repeat; 
+    background-size: cover;
+    position: relative;
 }
 .footer{
     width: 100%;
     height: 60px;
-    border: 2px solid grey;
 }
 .body{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 100%;
     box-sizing: border-box;
+    
 }
 .main{
     flex: 1 0 auto;
@@ -32,17 +33,14 @@ html{
 }
 
 /*Header Menu*/
-.header{
-    background: brown;
-}
-.header a{
+.header_wrapper a{
     text-decoration: none;
     cursor: pointer;
     outline: none;
 }
-.header a:hover,
-.header a:active,
-.header a:focus{
+.header_wrapper a:hover,
+.header_wrapper a:active,
+.header_wrapper a:focus{
     opacity: .6;
 }
 .header_wrapper{
@@ -89,3 +87,66 @@ html{
 .tom_menu_socials a:last-child{
     padding-right: 25px;
 }
+
+.header_container{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/header/main_banner.jpg) center center no-repeat;
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.top_banner_desc_container{
+    margin: 10%;
+    max-width: 900px;
+    max-height: 600px;
+    text-align: center;
+    padding: 10px;
+}
+.top_banner_desc_container>h1{
+    color: #ffffff;
+    font-family: "LemonMilkbold";
+    font-weight: 400;
+    font-size: 80px;
+    /* font-size: 11vw; */
+    line-height: .88;
+    text-transform: uppercase;
+
+}
+.top_banner_desc_container>p{
+    color: #ffffff;
+    font-family: "LemonMilkbold";
+    font-weight: 400;
+    font-size: 110px;
+    /* font-size: 7vw; */
+    line-height: .88;
+    text-transform: uppercase;
+}
+.top_banner_desc_container>a{
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+
+}
+.banner_link_button{
+    display: block;
+    color: #242424;
+    font-family: "Lato";
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 64px auto;
+    padding: 20px 40px;
+    background: red;
+    border-radius: 45px;
+    width: max-content;
+}
+
+
+
+
+
