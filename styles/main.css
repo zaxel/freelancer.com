@@ -7,7 +7,7 @@ html{
 .header{
     width: 100%;
     height: 100vh;
-    background: url(../img/header/main_banner_mixed.jpg) center center no-repeat; 
+    background: url(../img/header/main_banner_mixed.jpg) center no-repeat; 
     background-size: cover;
     position: relative;
 }
@@ -37,16 +37,23 @@ html{
     text-decoration: none;
     cursor: pointer;
     outline: none;
+    
 }
+
 .header_wrapper a:hover,
 .header_wrapper a:active,
 .header_wrapper a:focus{
     opacity: .6;
 }
+.logo,
+.top_menu_container,
+.banner_button_p{
+    z-index: 10;
+}
 .header_wrapper{
     max-width: 1464px;
-    margin: 0 auto;
-    padding: 0 8px;
+    margin: 40px auto;
+    padding: 0 60px;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -66,6 +73,7 @@ html{
     font-size: 43px;
     font-weight: 900;
 }
+
 .top_menu li{
     color: #ffffff;
     font-family: "Lato";
@@ -94,10 +102,11 @@ html{
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(../img/header/main_banner.jpg) center center no-repeat;
+    background: url(../img/header/main_banner.jpg) center no-repeat;
     background-size: cover;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    background-clip: text;
 }
 
 .top_banner_desc_container{
@@ -111,18 +120,17 @@ html{
     color: #ffffff;
     font-family: "LemonMilkbold";
     font-weight: 400;
-    font-size: 80px;
-    /* font-size: 11vw; */
+    /* font-size: 80px; */
+    font-size: 11vw;
     line-height: .88;
     text-transform: uppercase;
-
 }
 .top_banner_desc_container>p{
     color: #ffffff;
     font-family: "LemonMilkbold";
     font-weight: 400;
-    font-size: 110px;
-    /* font-size: 7vw; */
+    /* font-size: 110px; */
+    font-size: 7vw;
     line-height: .88;
     text-transform: uppercase;
 }
@@ -130,10 +138,14 @@ html{
     text-decoration: none;
     cursor: pointer;
     outline: none;
-
 }
-.banner_link_button{
-    display: block;
+.banner_button_p:hover,
+.banner_button_p:active,
+.banner_button_p:focus{
+    opacity: .6;
+}
+.banner_button_p{
+    -webkit-text-fill-color: #242424;
     color: #242424;
     font-family: "Lato";
     font-size: 21px;
