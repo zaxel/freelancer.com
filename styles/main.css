@@ -153,9 +153,18 @@ html{
     text-transform: uppercase;
     margin: 64px auto;
     padding: 20px 40px;
-    background: red;
+    background: #fff;
     border-radius: 45px;
     width: max-content;
+}
+.top_banner_image{
+    position: absolute;
+    bottom: -10vw;
+    right: 0;
+    /* overflow: hidden; */
+}
+.top_banner_img{
+    max-width: 100%;
 }
 
 
