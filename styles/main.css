@@ -102,14 +102,10 @@ html{
     left: 0;
     width: 100%;
     height: 100%;
-
-    
-
     background: url(../img/header/main_banner.jpg) center no-repeat;
     background-size: cover;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    background-clip: text;
 }
 
 .top_banner_desc_container{
@@ -119,7 +115,7 @@ html{
     text-align: center;
     padding: 10px;
 }
-.top_banner_desc_container>h1{
+.top_banner_slogan{
     color: #ffffff;
     font-family: "LemonMilkbold";
     font-weight: 400;
@@ -127,6 +123,10 @@ html{
     font-size: 11vw;
     line-height: .88;
     text-transform: uppercase;
+    letter-spacing: 0.51px;
+    text-shadow: rgba(0, 0, 0, .2) 7px -7px 8px;
+    
+
 }
 .top_banner_desc_container>p{
     color: #ffffff;
@@ -136,6 +136,8 @@ html{
     font-size: 7vw;
     line-height: .88;
     text-transform: uppercase;
+    text-shadow: rgba(0, 0, 0, .2) 7px -7px 8px;
+    letter-spacing: 0.51px;
 }
 .top_banner_desc_container>a{
     text-decoration: none;
@@ -148,6 +150,7 @@ html{
     opacity: .6;
 }
 .banner_button_p{
+    display: inline-block;
     -webkit-text-fill-color: #242424;
     color: #242424;
     font-family: "Lato";
@@ -158,19 +161,21 @@ html{
     padding: 20px 40px;
     background: #fff;
     border-radius: 45px;
-    width: max-content;
+    box-shadow: -4px 6px 33px 1px rgba(0,0,0,0.74);
+    -webkit-box-shadow: -4px 6px 33px 1px rgba(0,0,0,0.74);
+    -moz-box-shadow: -4px 6px 33px 1px rgba(0,0,0,0.74);
+    /* width: max-content; */
+    /* text-shadow: 0px -2px 2px rgba(0, 0, 0, 0.5); */
+
 }
 .top_banner_image{
     position: absolute;
-    /* right: 0;
-    top: 0; */
-    bottom: -10vw;
+    bottom: -13vw;
     right: 0;
-
-    /* overflow: hidden; */
 }
 .top_banner_img{
     max-width: 100%;
+    
 }
 
 
