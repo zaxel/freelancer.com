@@ -265,18 +265,18 @@ html{
     line-height: 30px;
     padding-bottom: 76px;
 }
-.who_we_button_link{
+.red_button_link{
     text-decoration: none;
     cursor: pointer;
     outline: none;
     
 }
-.who_we_button_link:hover,
-.who_we_button_link:active,
-.who_we_button_link:focus{
+.red_button_link:hover,
+.red_button_link:active,
+.red_button_link:focus{
     opacity: .6;
 }
-.who_we_button_p{
+.red_button_p{
     color: #ffffff;
     font-family: Lato;
     font-size: 21px;
@@ -305,6 +305,17 @@ html{
 .what_we_do_section{
     padding: 30px 0;
     background: #f5f5f5;
+    position: relative;
+}
+.what_we_do_section_triangle{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    content: '';
+    border: 100px solid transparent; 
+    border-left: 100px solid #bc2e3a;
+    /* z-index: -1; */
 }
 .what_we_do_section_h2{
     text-align: center;
@@ -323,6 +334,7 @@ html{
     align-items: flex-start;
     flex: 1 0 400px;
     margin: 30px 0;
+    z-index: 1;
 }
 .what_we_do_descr{
     display: flex;
@@ -361,12 +373,113 @@ html{
     top: 50%;       
     left: 50%;                  
     transform: translate(-50%, -50%)
-    
 }
 
-.test_section{
-    min-width: 100%;
+/*How We Work*/
+.how_we_work_wrapper{
+    margin-left: 13vw;
 }
+.how_we_work_h2{
+    margin: 70px 0;
+}
+.how_we_work_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 250px;
+}
+.how_we_work_card1{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.how_we_work_card{
+    flex: 1 1 20%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.how_we_work_card1>p{
+    color: #6a6a6a;
+    font-family: "Open Sans";
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-bottom: 45px;
+}
+.how_we_work_card2,
+.how_we_work_card3,
+.how_we_work_card4{
+    margin-left: 45px;
+    transform: skew(-25deg);
+    /* background: #000; */
+}
+.how_we_work_card2_img_cont{
+    position: absolute;
+    /* content: url(../img/howWeWork/idea.jpg); */
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 200%;
+    height: 200%;
+    /* max-width: 100%; */
+    /* content: url(../img/howWeWork/Layer_5.png); */
+     
+    transform: skew(25deg);
+}
+.how_we_work_card2_img_cont>img{
+    max-width: 100%;
+}
+.how_we_work_number{
+    font-family: "Lato";
+    font-size: 58px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.32px;
+    color: #fff;
+    transform: skew(25deg);
+    text-align: right;
+    margin: 10px 20px;
+}
+
+.we_wrk_img_hide_desc{
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.we_wrk_img_hide_desc>h4{
+    font-family: "Lato";
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.32px;
+    color: #fff;
+    transform: skew(25deg);
+    padding: 25px 10px;
+}
+.we_wrk_img_hide_desc>p{
+    display: none;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    transform: skew(25deg);
+    padding: 8px 8px 8px 45px;
+}
+
+
+
 
 @media (max-width:1500px){
 /*Header Menu*/
