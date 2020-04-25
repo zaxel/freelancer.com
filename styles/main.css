@@ -376,8 +376,12 @@ html{
 }
 
 /*How We Work*/
+.how_we_work_section{
+    overflow: hidden;
+}
 .how_we_work_wrapper{
     margin-left: 13vw;
+    
 }
 .how_we_work_h2{
     margin: 70px 0;
@@ -388,6 +392,7 @@ html{
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 250px;
+    
 }
 .how_we_work_card1{
     display: flex;
@@ -395,39 +400,42 @@ html{
     justify-content: space-evenly;
     align-items: flex-start;
     flex-direction: column;
+    flex: 1 0 20%;
 }
 .how_we_work_card{
-    flex: 1 1 20%;
+    /* flex: 1 1 20%; */
     height: 300px;
     position: relative;
-    overflow: hidden;
+    
 }
 .how_we_work_card1>p{
     color: #6a6a6a;
     font-family: "Open Sans";
     font-size: 17px;
     font-weight: 400;
-    line-height: 30px;
-    padding-bottom: 45px;
+    line-height: 29px;
+    padding-bottom: 35px;
+    max-height: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* z-index: 10; */
+
 }
 .how_we_work_card2,
 .how_we_work_card3,
 .how_we_work_card4{
+    flex: 1 1 20%;
     margin-left: 45px;
     transform: skew(-25deg);
-    /* background: #000; */
+    overflow: hidden;
 }
 .how_we_work_card2_img_cont{
     position: absolute;
-    /* content: url(../img/howWeWork/idea.jpg); */
     top: 0;
     left: 0;
     z-index: -1;
     width: 200%;
     height: 200%;
-    /* max-width: 100%; */
-    /* content: url(../img/howWeWork/Layer_5.png); */
-     
     transform: skew(25deg);
 }
 .how_we_work_card2_img_cont>img{
@@ -465,10 +473,16 @@ html{
     letter-spacing: 0.32px;
     color: #fff;
     transform: skew(25deg);
-    padding: 25px 10px;
+    padding: 15px 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
-.we_wrk_img_hide_desc>p{
+.we_wrk_img_hide_desc_p{
     display: none;
+    
+}
+.we_wrk_active{
+    display: block;
     color: #ffffff;
     font-family: "Open Sans";
     font-size: 18px;
@@ -476,8 +490,14 @@ html{
     line-height: 30px;
     transform: skew(25deg);
     padding: 8px 8px 8px 45px;
+    max-height: 150px;
 }
-
+.hww:hover,
+.hww:active,
+.hww:focus{
+    opacity: .6;
+    cursor: pointer;
+}
 
 
 
