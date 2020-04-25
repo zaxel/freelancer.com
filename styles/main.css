@@ -38,6 +38,7 @@ html{
     text-decoration: none;
     cursor: pointer;
     outline: none;
+    transition: .2s;
     
 }
 
@@ -50,6 +51,7 @@ html{
 .top_menu_container,
 .banner_button_p{
     z-index: 10;
+    
 }
 .header_wrapper{
     max-width: 1464px;
@@ -59,6 +61,7 @@ html{
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
+    
 }
 .top_menu_container,
 .top_menu,
@@ -115,6 +118,7 @@ html{
     max-height: 600px;
     text-align: center;
     padding: 10px;
+    
 }
 .top_banner_slogan{
     color: #ffffff;
@@ -149,6 +153,7 @@ html{
 .banner_button_p:active,
 .banner_button_p:focus{
     opacity: .6;
+    transition: .2s;
 }
 .banner_button_p{
     display: inline-block;
@@ -269,12 +274,14 @@ html{
     text-decoration: none;
     cursor: pointer;
     outline: none;
+    transition: .2s;
     
 }
 .red_button_link:hover,
 .red_button_link:active,
 .red_button_link:focus{
     opacity: .6;
+    
 }
 .red_button_p{
     color: #ffffff;
@@ -289,7 +296,6 @@ html{
     box-shadow: -10px 20px 54px -9px rgba(0,0,0,0.75);
     -webkit-box-shadow: -10px 20px 54px -9px rgba(0,0,0,0.75);
     -moz-box-shadow: -10px 20px 54px -9px rgba(0,0,0,0.75);
-
 }
 .who_we_are_background{
     position: absolute;
@@ -366,7 +372,6 @@ html{
     background: #bc2e3a;
     border-radius: 50%;
     margin: 10px;
-    
 }
 .what_we_do_icon>img{
     position: absolute;
@@ -377,11 +382,33 @@ html{
 
 /*How We Work*/
 .how_we_work_section{
+    position: relative;
+    /* overflow: hidden; */
+}
+.how_we_work_cont{
     overflow: hidden;
+
 }
 .how_we_work_wrapper{
     margin-left: 13vw;
-    
+}
+.triangle:after{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    content: '';
+    border: 30vw solid transparent; 
+    border-right: 30vw solid #bc2e3a;
+}
+.triangle:before{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(+50%);
+    content: '';
+    border: 8vw solid transparent; 
+    border-left: 8vw solid #171717;
 }
 .how_we_work_h2{
     margin: 70px 0;
@@ -392,7 +419,6 @@ html{
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 250px;
-    
 }
 .how_we_work_card1{
     display: flex;
@@ -403,10 +429,9 @@ html{
     flex: 1 0 20%;
 }
 .how_we_work_card{
-    /* flex: 1 1 20%; */
     height: 300px;
     position: relative;
-    
+    transition: .2s;
 }
 .how_we_work_card1>p{
     color: #6a6a6a;
@@ -418,8 +443,6 @@ html{
     max-height: 150px;
     text-overflow: ellipsis;
     overflow: hidden;
-    /* z-index: 10; */
-
 }
 .how_we_work_card2,
 .how_we_work_card3,
@@ -428,6 +451,9 @@ html{
     margin-left: 45px;
     transform: skew(-25deg);
     overflow: hidden;
+    box-shadow: -10px 20px 54px -9px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -10px 20px 54px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: -10px 20px 54px -9px rgba(0,0,0,0.75);
 }
 .how_we_work_card2_img_cont{
     position: absolute;
@@ -479,7 +505,6 @@ html{
 }
 .we_wrk_img_hide_desc_p{
     display: none;
-    
 }
 .we_wrk_active{
     display: block;
@@ -501,6 +526,17 @@ html{
 
 
 
+
+/*Our Team*/
+.our_team{
+    background: grey;
+    height: 100px;
+}
+
+
+
+
+
 @media (max-width:1500px){
 /*Header Menu*/
     .top_banner_image{
@@ -518,6 +554,21 @@ html{
     }
     .header{
         overflow: hidden;
+    }
+}
+
+@media (max-width:1200px){
+    /*Ho We Work*/
+    .how_we_work_card{
+        flex: 0 0 250px;
+        margin-bottom: 30px;
+    }
+    .how_we_work_card:nth-child(1){
+        order: 4;
+        margin-left: 20px;
+    }
+    .how_we_work_container{
+        margin-bottom: 100px;
     }
 }
 
@@ -592,6 +643,13 @@ html{
     /*What We Do*/
     .what_we_do_card{
         flex: 1 1 400px;
+    }
+    /*Ho We Work*/
+    .how_we_work_container{
+        margin-bottom: 10px;
+    }
+    .how_we_work_h2{
+        margin: 20px 0;
     }
     
 }
