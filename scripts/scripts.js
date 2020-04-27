@@ -15,7 +15,9 @@ $(document).ready(function () {
     $('.team_slider').slick({
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 3
+        centerMode: true,
+        centerPadding: '150px',
+        slidesToScroll: 1
     });
 });
 
