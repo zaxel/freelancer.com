@@ -11,7 +11,8 @@ $(document).ready(function () {
     }
     //How We Work Section End
 });
-    //Our Team Strart
+
+//Our Team Strart
 $(document).ready(function () {
     //Slick Carousel Start
     $('.team_slider').slick({
@@ -37,26 +38,16 @@ $(document).ready(function () {
           ]
     });
     //Slick Carousel End
+    //Slick Carousel person ocupation removed on inactive slide Start
     $(".slick-active").not(".slick-center").find(".team_ocupation").addClass('team_ocupation_hiden');
-    $(".slick-active").not(".slick-center").find(".team_name").addClass('team_name_moved');
-    // $(".slick-active").find(".team_ocupation").removeClass('team_ocupation_hiden');
     $(".slick-arrow").click(function () { 
         $(".slick-active").find(".team_ocupation").addClass('team_ocupation_hiden');
         $(".slick-center").find(".team_ocupation").removeClass('team_ocupation_hiden');
-        $(".slick-active").find(".team_name").addClass('team_name_moved');
-        
-        $(".slick-center").find(".team_name").addClass('team_name_normal');
-        
     });
-
-    // $(".slick-active").on('swipe', function (event, slick, currentSlide, nextSlide) { 
-    //     $(".slick-active").find(".team_ocupation").addClass('team_ocupation_hiden');
-    //     $(".slick-center").find(".team_ocupation").removeClass('team_ocupation_hiden');
-    //     $(".slick-active").find(".team_name").addClass('team_name_moved');
-        
-    //     $(".slick-center").find(".team_name").addClass('team_name_normal');
-        
-    // });
-    
+    $(".team_slider").on('swipe', function (event, slick, currentSlide, nextSlide) { 
+      $(".slick-active").find(".team_ocupation").addClass('team_ocupation_hiden');
+      $(".slick-center").find(".team_ocupation").removeClass('team_ocupation_hiden');
+    });
+    //Slick Carousel person ocupation removed on inactive slide End
 });
 //Our Team End
