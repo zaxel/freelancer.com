@@ -51,3 +51,17 @@ $(document).ready(function () {
     //Slick Carousel person ocupation removed on inactive slide End
 });
 //Our Team End
+
+//Client Says Start
+$(document).ready(function(){
+  $(".client_prewiev_pic").click(function(){
+    let hrefImg = $(this).find(".client_prewiev_pic_img").attr('src');
+    let custFeedback = $(this).find(".client_prewiev_p").text();
+    let custOcupation = $(this).find(".client_prewiev_h4").text();
+    console.log(custFeedback);
+    $(".client_picture_main").attr("src", hrefImg); 
+    $(".client_descr_p").text(custFeedback);
+    $(".client_descr_h4").text(custOcupation);
+  });
+});
+//Client Says End

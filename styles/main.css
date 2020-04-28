@@ -640,12 +640,31 @@ html{
 }
 
 /*Clients Says*/
-.clients_says_h2{
-    margin: 100px 0 30px 0;
-    text-align: center;
+.clients_says{
+    position: relative;
 }
-.client_picture,
-.client_prewiev_pic{
+.clients_says_triangle:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 30vw solid transparent; 
+    border-left: 30vw solid #bc2e3a;
+}
+.clients_says_triangle:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 8vw solid transparent; 
+    border-top: 8vw solid #424240; 
+    border-right: 8vw solid #424240; 
+}
+.clients_says_h2{
+    padding: 100px 0 100px 100px;
+}
+.client_picture{
     position: relative;
     height:300px;
     width:300px;
@@ -670,9 +689,18 @@ html{
     position: relative;
     height:50px;
     width:50px;
+    overflow: hidden;
     border: solid 2px #fff;
+    transform: rotate(45deg);
     margin-left: 3vw;
     margin-bottom: 20px;
+    transition: .3s;
+    cursor: pointer;
+}
+.client_prewiev_pic:hover,
+.client_prewiev_pic:active,
+.client_prewiev_pic:focus{
+    opacity: .6;
 }
 .client_prewiev_pic>img{
     position: absolute;
@@ -688,6 +716,8 @@ html{
     justify-content: space-between;
     align-items: center;
     padding-bottom: 200px;
+    padding-left: 60px;
+
 }
 .client_picture{
     flex: 0 0 auto;
@@ -726,19 +756,27 @@ html{
 
 .client_descr_p{
     color: #6a6a6a;
-    font-family: "Lato Black";
+    font-family: "Open Sans";
     font-size: 20px;
-    /* line-height: 30px; */
-    font-weight: bolder;
+    line-height: 30px;
     margin-bottom: 20px;
+    z-index: 1;
 }
 .client_descr_h4{
     color: #6a6a6a;
-    font-family: "Lato";
-    font-size: 20px;
-    font-weight: 900;
-    /* line-height: 30px; */
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
     margin-bottom: 40px;
+}
+.client_prewiev_p2,
+.client_prewiev_h4{
+    display: none;
+}
+.footer{
+    background: olivedrab;
+    height: 250px;
 }
 
 
@@ -812,6 +850,28 @@ html{
     .card_wrapper_team {
         padding: 100px 0 20px 0;
     }
+    /*Clients Says*/
+    .clients_says_container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        overflow: hidden;
+    }
+    .quotes_cont{
+        display: none;
+    }
+    .clients_says_h2{
+        padding: 20px 0 80px 20px;
+    }
+    .client_picture{
+        margin-bottom: 80px;
+    }
+    .client_descr_cont_main{
+        padding-left: 0px;
+    }
+    
 }
 
 @media (max-width:800px){
@@ -837,6 +897,11 @@ html{
     }
     .who_we_p{
         padding-bottom: 30px;
+    }
+    /*Clients Says*/
+    .client_descr_cont{
+        flex-direction: column-reverse;
+        align-items: center;
     }
 }
     
