@@ -533,13 +533,16 @@ html{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
+
 .our_team_h2{
     padding: 100px 0 20px 0;
     text-align: center;
 }
 .team_slider{
-    max-width: 1400px;
+    max-width: 80vw;
+    
 }
 
 .slick-track{
@@ -549,26 +552,26 @@ html{
     /* transform: scale(.7); */
 }
 .card_wrapper_team{
-    
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    /* bottom: 0; */
 }
 
 
 .team_slider_img{
     position: relative;
-    
     height:350px;
     width:350px;
     border: solid 20px #fff;
     transform: rotate(45deg) scale(.7);
     /* transform: translateY(30%); */
+    z-index: -1;
     overflow: hidden;
+    -webkit-box-shadow: -2px -5px 35px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px -5px 35px -13px rgba(0,0,0,0.75);
+    box-shadow: -2px -5px 35px -13px rgba(0,0,0,0.75);
 }
 .team_slider_img>img{
     position: absolute;
@@ -586,6 +589,12 @@ html{
     white-space: nowrap;
     text-align: center;
     z-index: 4;
+}
+.team_name_moved{
+    transform: translateY(-60px) translateX(-20px) skew(45deg) scale(.7);
+}
+.team_name_normal{
+    transform: translateY(-90px) translateX(-20px) skew(45deg) scale(.7);
 }
 .team_name>p{
     padding: 5px 15px;
@@ -614,8 +623,11 @@ html{
     line-height: 31.97px;
     transform: skew(-45deg); /* translateY(-50%) translateX(-60%);*/
 }
+.team_ocupation_hiden{
+    display: none;
+}
 .card_wrapper_team{
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
 .slick-active .team_slider_img{
@@ -634,8 +646,32 @@ html{
 .slick-center .team_ocupation{
     transform: translateY(-35px) skew(45deg) scale(1);
 }
-
-
+.slick-prev:before{
+    content: '';
+    position: absolute;
+    right: 3vw;
+    bottom: -20px;
+    border: 50px solid transparent; 
+    border-right: 50px solid #424240;
+    
+}
+.slick-next:before{
+    content: '';
+    position: absolute;
+    left: 3vw;
+    bottom: -20px;
+    border: 50px solid transparent; 
+    border-left: 50px solid #424240;
+}
+.slick-slide{
+    /* opacity: 0; */
+}
+.slick-active{
+    opacity: .7;
+}
+.slick-center{
+    opacity: 1;
+}
 
 
 @media (max-width:1500px){
@@ -701,7 +737,15 @@ html{
     .what_we_do_card{
         margin: 10px 0;
     }
+    /*Our Team*/
+    .our_team_h2{
+        padding: 20px 0 0 0;
+    }
+    .card_wrapper_team {
+        padding: 100px 0 20px 0;
+    }
 }
+
 @media (max-width:800px){
     /*Header Menu*/
     .top_menu_container{
