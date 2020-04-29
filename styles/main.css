@@ -12,6 +12,7 @@ html{
     background-size: cover;
     position: relative;
 }
+
 .footer{
     width: 100%;
     height: 60px;
@@ -211,6 +212,22 @@ html{
 .burger:active,
 .burger:focus{
     opacity: .6;
+}
+.burger.active_burger:before{
+    transform: rotate(45deg);
+    top: 14px;
+    transition: .5s;
+}
+.burger.active_burger:after{
+    transform: rotate(-45deg);
+    bottom: 14px;
+    transition: .5s;
+}
+.burger.active_burger span{
+    transform: scale(0);
+}
+body.lock{
+    overflow: hidden;
 }
 
 /*Who We Are*/
@@ -876,12 +893,61 @@ html{
 
 @media (max-width:800px){
     /*Header Menu*/
-    .top_menu_container{
+    .top_menu{
+        display: none;
+        overflow: auto;
+    }
+    
+    .top_menu_active{
+        position: absolute;
+        top: 120px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background: #bc2e3a;
+        
+    }
+    .top_menu li{
+        color: #ffffff;
+        font-family: "Lato";
+        font-size: 35px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.24px;
+        padding: 30px 10px;
+    }
+    .top_menu li:last-child{
+        margin-bottom: 50px;
+    }
+    .block_hide{
         display: none;
     }
     .burger{
         display: block;
     }
+    .header:before{
+        content:'';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        background: #171717;
+    }
+
+
+
+
+
+
+
+
+
     /*Who We Are*/
     .who_we_descr{
         flex: 1 0 400px;
@@ -929,7 +995,10 @@ html{
     .how_we_work_h2{
         margin: 20px 0;
     }
-    
+    /*Client Says*/
+    .clients_says{
+        display: none;
+    }
 }
 
 @media (max-width:370px){
@@ -942,4 +1011,5 @@ html{
         min-height: 50px;
         
     }
+    
 }

@@ -65,3 +65,25 @@ $(document).ready(function(){
   });
 });
 //Client Says End
+
+//Burger Start
+$(document).ready(function(){
+  const top_menu = document.querySelector('.top_menu');
+  const header = document.querySelector('.header');
+  const body = document.querySelector('body');
+  const burger = document.querySelector('.burger');
+  // $('.top_menu').addClass('top_menu_active');
+  $('.burger').click(function(event){
+      $('.top_menu').toggleClass('top_menu_active');
+      // $('.header:before').toggleClass('top_menu_hiden');
+      $(this).toggleClass('active_burger');
+      $('body').toggleClass('lock');
+      $('.top_menu').click(function(event){
+        $('.top_menu').removeClass('top_menu_active');
+          burger.classList.remove('active_burger');
+          body.classList.remove('lock');
+
+      });
+  });
+});
+//Burger End
