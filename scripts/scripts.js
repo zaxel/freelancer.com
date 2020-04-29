@@ -68,8 +68,6 @@ $(document).ready(function(){
 
 //Burger Start
 $(document).ready(function(){
-  const top_menu = document.querySelector('.top_menu');
-  const header = document.querySelector('.header');
   const body = document.querySelector('body');
   const burger = document.querySelector('.burger');
   // $('.top_menu').addClass('top_menu_active');
@@ -82,7 +80,6 @@ $(document).ready(function(){
         $('.top_menu').removeClass('top_menu_active');
           burger.classList.remove('active_burger');
           body.classList.remove('lock');
-
       });
   });
 });

@@ -322,7 +322,6 @@ body.lock{
     content: '';
     border: 100px solid transparent; 
     border-left: 100px solid #bc2e3a;
-    /* z-index: -1; */
 }
 .what_we_do_section_h2{
     text-align: center;
@@ -380,7 +379,6 @@ body.lock{
     left: 50%;                  
     transform: translate(-50%, -50%)
 }
-
 /*How We Work*/
 .how_we_work_section{
     position: relative;
@@ -772,7 +770,6 @@ body.lock{
     width:50%;
     height: 50%;
 }
-
 .client_descr_p{
     color: #6a6a6a;
     font-family: "Open Sans";
@@ -801,18 +798,7 @@ body.lock{
     height: 100%;
     background: url(../img/footer/Place_Image.jpg) center no-repeat;
     background-size: cover;
-    /* overflow: visible; */
 }
-/* .footer:after{
-   position: absolute;
-   content: '';
-   width: 0;
-    height: 0;
-    bottom: 0;
-    left: 0;
-    border: 8vw solid transparent; 
-    border-bottom: 8vw solid #bc2e3a;
-} */
 .footer_triangle{
     position: absolute;
     bottom: 0;
@@ -923,8 +909,6 @@ body.lock{
     margin-bottom: 60px;
 }
 
-
-
 @media (max-width:1500px){
 /*Header Menu*/
     .top_banner_image{
@@ -959,7 +943,6 @@ body.lock{
         margin-bottom: 100px;
     }
 }
-
 
 @media (max-width:1000px){
 /*Header Menu*/
@@ -1164,5 +1147,4 @@ body.lock{
     .footer_copyright{
         display: none;
     }
-    
 }
