@@ -746,6 +746,7 @@ body.lock{
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-start;
+    z-index: 5;
 }
 .client_descr_cont{
     display: flex;
